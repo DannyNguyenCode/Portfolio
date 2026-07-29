@@ -7,15 +7,14 @@ import { MaterialSymbol } from "@/components/MaterialSymbol";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Curated technical creations — full-stack apps, APIs, and the Web Design Lounge portfolio.",
+    "Curated technical creations — full-stack apps, APIs, and client-facing web experiences.",
 };
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
 
 const POKEMON_CARD_IMG = "/MewTCGProjects.png";
 
-const PORTFOLIO_SHOWCASE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAGg3m31zK2TPR7NAozVc96HpgV97TWwUPmlyX9Yxt_AzyA1KjhA-k1gUr_Da2_7L-0EmWPOd1mG84oNEGQTigwkqcVNZgyQmkaBu2ih2lesunLHBJ1_ogHqFkx2ZOibCjwjiwhnRoTBrYJlBgFcO1SwLBl8oQ8kfzlo_auZrr3tPIIXlhKXPMx9wtRVYzHaZpuHfg3aZFz-f0RH8NfmWyRtQlVJfYcYRZ5XTicBcHq23axXByoNbSTSnHrepfcuGFvOQPuEqk1uIA";
+const NICE_GUY_LOGO = "/niceguywebdesignlogodark.png";
 
 const LINKS = {
   pokemon: {
@@ -28,6 +27,10 @@ const LINKS = {
   },
   shoppingCartApi:
     "https://github.com/DannyNguyenCode/shoppingcart_api",
+  niceGuyWebDesign: {
+    github: "https://github.com/DannyNguyenCode/niceguyservices",
+    live: "https://niceguyservices.vercel.app/",
+  },
 } as const;
 
 export default function ProjectsPage() {
@@ -210,43 +213,62 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        {/* The Web Design Lounge */}
+        {/* Nice Guy Web Design */}
         <div
           className={`relative w-full overflow-hidden rounded-xl p-6 shadow-[0_20px_40px_rgba(55,45,36,0.06)] sm:p-8 md:col-span-8 md:p-12`}
         >
           <div className="absolute inset-0 bg-surface-container-low opacity-50" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,#fe9f55_0%,transparent_50%)] opacity-20" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,#557ec0_0%,transparent_50%)] opacity-20" />
           <div className="relative flex w-full min-w-0 flex-col gap-8 md:flex-row md:items-center">
             <div className="w-full min-w-0 md:w-1/2">
               <h2 className="mb-6 font-headline text-3xl font-bold tracking-tighter text-on-surface md:text-4xl">
-                The Web Design Lounge
+                Nice Guy Web Design
               </h2>
               <p className="mb-8 text-base leading-relaxed text-on-surface-variant">
-                This portfolio is a living testament to my philosophy. Built with
-                Next.js and Vercel, it prioritizes warmth, accessibility, and
-                high-performance storytelling.
+                A Toronto studio site built for small businesses that need fast,
+                thoughtful websites. Custom builds, UX/UI, performance tuning, and
+                technical SEO — all focused on turning visitors into customers.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="flex items-center gap-2 text-xs font-bold text-primary">
-                  <MaterialSymbol name="speed" className="text-lg" />
-                  Performance 100
-                </span>
-                <span className="flex items-center gap-2 text-xs font-bold text-primary">
-                  <MaterialSymbol name="accessibility_new" className="text-lg" />
-                  Accessible
-                </span>
+              <div className="mb-8 flex flex-wrap gap-2">
+                {["Next.js", "TypeScript", "Tailwind CSS"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded bg-surface-container-high px-2 py-1 text-xs font-medium text-on-surface"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href={LINKS.niceGuyWebDesign.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+                >
+                  <MaterialSymbol name="code" className="text-lg" />
+                  GitHub
+                </a>
+                <a
+                  href={LINKS.niceGuyWebDesign.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+                >
+                  <MaterialSymbol name="rocket_launch" className="text-lg" />
+                  Live Demo
+                </a>
               </div>
             </div>
             <div className="w-full min-w-0 md:w-1/2">
-              <div className="mx-auto w-full max-w-none rounded-xl border border-white/20 bg-white/40 p-2 shadow-xl backdrop-blur-md sm:p-3 md:mx-0">
-                <div className="aspect-video min-h-50 w-full overflow-hidden rounded-lg sm:min-h-56 md:min-h-0">
+              <div className="mx-auto w-full max-w-none rounded-xl border border-white/20 bg-black p-6 shadow-xl sm:p-8 md:mx-0">
+                <div className="flex aspect-video min-h-50 w-full items-center justify-center rounded-lg sm:min-h-56 md:min-h-0">
                   <Image
-                    src={PORTFOLIO_SHOWCASE_IMG}
-                    alt="Minimal workspace with laptop and plant in soft natural light"
-                    width={640}
-                    height={360}
-                    className="h-full w-full object-cover"
-                    sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, min(100vw - 3rem, 720px)"
+                    src={NICE_GUY_LOGO}
+                    alt="Nice Guy Web Design logo"
+                    width={320}
+                    height={280}
+                    className="h-auto w-full max-w-xs object-contain"
                   />
                 </div>
               </div>

@@ -111,14 +111,14 @@ export function SiteFooter() {
             className="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-stone-600 transition-colors hover:bg-surface-bright hover:text-primary"
           >
             <Image
-              src="/blue_logo_test.png"
+              src="/niceguywebdesignlogodark.png"
               alt=""
               width={120}
               height={40}
               className="h-8 w-auto max-w-28 object-contain object-left"
             />
             <span className="font-headline text-sm font-semibold tracking-tight">
-              NiceGuyServices
+              Nice Guy Web Design
             </span>
           </a>
         </div>
