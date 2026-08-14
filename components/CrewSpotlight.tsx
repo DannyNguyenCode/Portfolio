@@ -125,7 +125,7 @@ export const minaHabitatSpotlightPreset: Omit<CrewSpotlightProps, "className"> =
   imageAlt: "Mina in a warm, cozy setting beside the workspace",
   title: (
     <>
-      Mina's{" "}
+      Mina&apos;s{" "}
       Smart Play<span className="text-primary italic">Habitat</span>
     </>
   ),
@@ -200,7 +200,7 @@ export const nalaSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
 export const flairSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
   imageSrc: "/FlairCrew.png",
   imageAlt: "Flair, Senior Research Assistant — crew spotlight portrait",
-  title: <>Flair's Energetic<br /><span className='text-primary italic'> Research Hub</span></>,
+  title: <>Flair&apos;s Energetic<br /><span className='text-primary italic'> Research Hub</span></>,
   description: (
     <>
       As our Senior Research Assistant and the youngest member of the Web Design Lounge, Flair provides the essential{" "}
