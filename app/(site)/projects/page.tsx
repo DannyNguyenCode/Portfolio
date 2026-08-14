@@ -21,12 +21,14 @@ const LINKS = {
     github: "https://github.com/DannyNguyenCode/pokemon-tradingcardgame",
     live: "https://pokemon-tradingcardgame.vercel.app",
   },
+  websiteAudit: {
+    github: "https://github.com/DannyNguyenCode/niceguyservices",
+    live: "https://niceguyservices.vercel.app/work/website-audit",
+  },
   pet200: {
     github: "https://github.com/DannyNguyenCode/pet200",
     live: "https://pet200.vercel.app/",
   },
-  shoppingCartApi:
-    "https://github.com/DannyNguyenCode/shoppingcart_api",
   niceGuyWebDesign: {
     github: "https://github.com/DannyNguyenCode/niceguyservices",
     live: "https://niceguyservices.vercel.app/",
@@ -123,30 +125,28 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        {/* Pet200 */}
+        {/* Website Audit */}
         <div
           className={`group flex flex-col justify-between rounded-xl bg-surface-container-lowest p-8 transition-colors duration-500 hover:bg-surface-bright md:col-span-4 ${cardShadow}`}
         >
           <div>
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container">
               <MaterialSymbol
-                name="pets"
+                name="query_stats"
                 className="text-on-secondary-container"
               />
             </div>
             <h2 className="mb-3 font-headline text-2xl font-bold text-on-surface">
-              Pet200
+              Website Audit
             </h2>
             <p className="mb-6 text-sm leading-relaxed text-on-surface-variant">
-              A RuneScape-inspired pet social platform that connects pet owners,
-              shelters, trainers, and local businesses through an MMO-style
-              community experience. The platform features RPG-inspired pet
-              profiles, playdate scheduling, ranking system, reviews, achievement
-              systems, and transparent donation campaigns supporting animal
-              welfare initiatives.
+              A practical review tool that analyzes performance, accessibility,
+              messaging, trust signals, mobile experience, and conversion
+              clarity, then returns prioritized opportunities for improvement
+              with automated checks, PageSpeed signals, and a visual review pass.
             </p>
             <div className="mb-6 flex flex-wrap gap-2">
-              {["NEXT.JS", "MONGODB", "MUI"].map((tag) => (
+              {["NEXT.JS", "TYPESCRIPT", "MONGODB"].map((tag) => (
                 <span
                   key={tag}
                   className="rounded bg-surface-container px-2 py-1 text-[10px] font-bold text-on-surface-variant"
@@ -158,6 +158,61 @@ export default function ProjectsPage() {
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-surface-container pt-6">
             <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={LINKS.websiteAudit.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              >
+                <MaterialSymbol name="code" className="text-lg" />
+                GitHub
+              </a>
+              <a
+                href={LINKS.websiteAudit.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              >
+                <MaterialSymbol name="rocket_launch" className="text-lg" />
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Pet200 */}
+        <div
+          className={`group flex flex-col rounded-xl bg-surface-container-high p-8 transition-colors duration-500 hover:bg-surface-container md:col-span-4 ${cardShadow}`}
+        >
+          <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container">
+            <MaterialSymbol
+              name="pets"
+              className="text-on-secondary-container"
+            />
+          </div>
+          <h2 className="mb-3 font-headline text-2xl font-bold text-on-surface">
+            Pet200
+          </h2>
+          <p className="mb-6 text-sm leading-relaxed text-on-surface-variant">
+            A RuneScape-inspired pet social platform that connects pet owners,
+            shelters, trainers, and local businesses through an MMO-style
+            community experience. The platform features RPG-inspired pet
+            profiles, playdate scheduling, ranking system, reviews, achievement
+            systems, and transparent donation campaigns supporting animal
+            welfare initiatives.
+          </p>
+          <div className="mt-auto">
+            <div className="mb-4 flex flex-wrap gap-2">
+              {["NEXT.JS", "MONGODB", "MUI"].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded bg-surface-container px-2 py-1 text-[10px] font-bold text-on-surface-variant"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center gap-4 border-t border-surface-container pt-6">
               <a
                 href={LINKS.pet200.github}
                 target="_blank"
@@ -177,39 +232,6 @@ export default function ProjectsPage() {
                 Live Demo
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Shopping Cart API */}
-        <div
-          className={`group flex flex-col rounded-xl bg-surface-container-high p-8 transition-colors duration-500 hover:bg-surface-container md:col-span-4 ${cardShadow}`}
-        >
-          <div className="mb-6">
-            <MaterialSymbol name="api" className="text-4xl text-primary" />
-          </div>
-          <h2 className="mb-3 font-headline text-2xl font-bold text-on-surface">
-            Shopping Cart API
-          </h2>
-          <p className="mb-8 text-sm leading-relaxed text-on-surface-variant">
-            A robust RESTful backend infrastructure designed for high-concurrency
-            e-commerce operations. Built with a focus on data integrity.
-          </p>
-          <div className="mt-auto">
-            <div className="mb-4 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary" />
-              <span className="text-xs font-semibold text-on-surface-variant">
-                FLASK • SQLALCHEMY
-              </span>
-            </div>
-            <a
-              href={LINKS.shoppingCartApi}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-on-surface px-4 py-2 text-xs font-bold text-surface transition-colors hover:bg-primary"
-            >
-              View Repository
-              <MaterialSymbol name="arrow_forward" className="text-sm" />
-            </a>
           </div>
         </div>
 
